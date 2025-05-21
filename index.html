@@ -165,23 +165,127 @@
     </div>
 
     <!-- Tech Secretaries Table -->
-<div style="overflow-x: auto; max-width: 100%;">
-  <table class="tech-secretaries-table" style="width: 100%; min-width: 600px; border-collapse: collapse; font-family: Arial, sans-serif; text-align: left;">
-      <tr style="background-color: #4CAF50; color: white;">
-          <th style="padding: 12px; border: 1px solid #ddd;">Technical Secretaries</th>
-          <th style="padding: 12px; border: 1px solid #ddd;">From</th>
-          <th style="padding: 12px; border: 1px solid #ddd;">To</th>
-      </tr>
-      <tr style="background-color: #f9f9f9;">
-          <td style="padding: 12px; border: 1px solid #ddd;">
-              <a href="https://www.linkedin.com/in/abhiramgirishnaik/" target="_blank" style="color: #1a0dab; text-decoration: none;">Abhiram Girish Naik</a> &amp; 
-              <a href="https://www.linkedin.com/in/sudarshana-v-d/" target="_blank" style="color: #1a0dab; text-decoration: none;">Sudarshana V D</a>
-          </td>
-          <td style="padding: 12px; border: 1px solid #ddd;">2024</td>
-          <td style="padding: 12px; border: 1px solid #ddd;">-</td>
-      </tr>
-  </table>
-</div>
+<style>
+.tech-secretaries-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    min-width: 600px;
+}
+
+.tech-secretaries-table th, 
+.tech-secretaries-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.tech-secretaries-table thead tr {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tech-secretaries-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tech-secretaries-table a {
+    color: #1a0dab;
+    text-decoration: none;
+}
+
+.tech-secretaries-table a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 650px) {
+    .tech-secretaries-table {
+        min-width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .tech-secretaries-table thead, 
+    .tech-secretaries-table tbody, 
+    .tech-secretaries-table tr, 
+    .tech-secretaries-table th, 
+    .tech-secretaries-table td {
+        display: inline-block;
+        white-space: normal;
+        vertical-align: top;
+    }
+
+    .tech-secretaries-table thead tr {
+        display: none;
+    }
+
+    .tech-secretaries-table tbody tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        padding: 10px;
+        display: block;
+    }
+
+    .tech-secretaries-table tbody td {
+        display: block;
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .tech-secretaries-table tbody td:nth-of-type(1)::before {
+        content: "Technical Secretaries";
+        position: absolute;
+        left: 10px;
+        top: 12px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .tech-secretaries-table tbody td:nth-of-type(2)::before {
+        content: "From";
+        position: absolute;
+        left: 10px;
+        top: 12px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .tech-secretaries-table tbody td:nth-of-type(3)::before {
+        content: "To";
+        position: absolute;
+        left: 10px;
+        top: 12px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+</style>
+
+<table class="tech-secretaries-table">
+    <thead>
+        <tr>
+            <th>Technical Secretaries</th>
+            <th>From</th>
+            <th>To</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <a href="https://www.linkedin.com/in/abhiramgirishnaik/" target="_blank">Abhiram Girish Naik</a> &amp; 
+                <a href="https://www.linkedin.com/in/sudarshana-v-d/" target="_blank">Sudarshana V D</a>
+            </td>
+            <td>2024</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
+
 
 
     <!-- Clubs Section -->
